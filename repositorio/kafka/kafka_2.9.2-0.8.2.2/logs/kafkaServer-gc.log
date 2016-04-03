@@ -1,0 +1,17 @@
+OpenJDK 64-Bit Server VM (24.95-b01) for linux-amd64 JRE (1.7.0_95-b00), built on Jan 21 2016 03:31:40 by "buildd" with gcc 4.8.4
+Memory: 4k page, physical 4048216k(2834772k free), swap 0k(0k free)
+CommandLine flags: -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -XX:InitialHeapSize=1073741824 -XX:+ManagementServer -XX:MaxHeapSize=1073741824 -XX:MaxNewSize=174485504 -XX:MaxTenuringThreshold=6 -XX:NewSize=174485504 -XX:OldPLABSize=16 -XX:OldSize=348971008 -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+UseCompressedOops -XX:+UseConcMarkSweepGC -XX:+UseParNewGC 
+2016-04-03T04:22:22.652+0000: 5.789: [GC [1 CMS-initial-mark: 0K(878208K)] 79126K(1031552K), 0.0244140 secs] [Times: user=0.02 sys=0.00, real=0.02 secs] 
+2016-04-03T04:22:22.679+0000: 5.816: [CMS-concurrent-mark-start]
+2016-04-03T04:22:22.707+0000: 5.844: [CMS-concurrent-mark: 0.028/0.028 secs] [Times: user=0.05 sys=0.00, real=0.03 secs] 
+2016-04-03T04:22:22.707+0000: 5.845: [CMS-concurrent-preclean-start]
+2016-04-03T04:22:22.811+0000: 5.948: [CMS-concurrent-preclean: 0.071/0.103 secs] [Times: user=0.05 sys=0.15, real=0.10 secs] 
+2016-04-03T04:22:22.811+0000: 5.948: [CMS-concurrent-abortable-preclean-start]
+ CMS: abort preclean due to time 2016-04-03T04:22:27.875+0000: 11.012: [CMS-concurrent-abortable-preclean: 0.236/5.063 secs] [Times: user=1.00 sys=1.04, real=5.06 secs] 
+2016-04-03T04:22:27.876+0000: 11.013: [GC[YG occupancy: 98222 K (153344 K)]2016-04-03T04:22:27.876+0000: 11.013: [GC2016-04-03T04:22:27.877+0000: 11.014: [ParNew: 98222K->10819K(153344K), 0.0287460 secs] 98222K->10819K(1031552K), 0.0294100 secs] [Times: user=0.05 sys=0.00, real=0.04 secs] 
+2016-04-03T04:22:27.906+0000: 11.043: [Rescan (parallel) , 0.0153770 secs]2016-04-03T04:22:27.922+0000: 11.059: [weak refs processing, 0.0002880 secs]2016-04-03T04:22:27.922+0000: 11.060: [class unloading, 0.0041830 secs]2016-04-03T04:22:27.928+0000: 11.065: [scrub symbol table, 0.0039990 secs]2016-04-03T04:22:27.932+0000: 11.069: [scrub string table, 0.0004370 secs] [1 CMS-remark: 0K(878208K)] 10819K(1031552K), 0.0567600 secs] [Times: user=0.09 sys=0.00, real=0.06 secs] 
+2016-04-03T04:22:27.934+0000: 11.071: [CMS-concurrent-sweep-start]
+2016-04-03T04:22:27.940+0000: 11.078: [CMS-concurrent-sweep: 0.007/0.007 secs] [Times: user=0.00 sys=0.01, real=0.01 secs] 
+2016-04-03T04:22:27.947+0000: 11.085: [CMS-concurrent-reset-start]
+2016-04-03T04:22:27.961+0000: 11.098: [CMS-concurrent-reset: 0.009/0.013 secs] [Times: user=0.00 sys=0.01, real=0.01 secs] 
+2016-04-03T12:15:07.546+0000: 28370.684: [GC2016-04-03T12:15:07.547+0000: 28370.685: [ParNew: 147139K->3010K(153344K), 0.0351420 secs] 147139K->5866K(1031552K), 0.0364420 secs] [Times: user=0.11 sys=0.00, real=0.04 secs] 
