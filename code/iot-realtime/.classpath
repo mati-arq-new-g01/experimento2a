@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/jopt-simple-3.2.jar"/>
+	<classpathentry kind="lib" path="lib/kafka_2.9.2-0.8.2.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/kafka_2.9.2-0.8.2.2-scaladoc.jar"/>
+	<classpathentry kind="lib" path="lib/kafka_2.9.2-0.8.2.2-sources.jar"/>
+	<classpathentry kind="lib" path="lib/kafka_2.9.2-0.8.2.2-test.jar"/>
+	<classpathentry kind="lib" path="lib/kafka_2.9.2-0.8.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/kafka-clients-0.8.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/lz4-1.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/metrics-core-2.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/mqtt-client-0.4.0.jar"/>
+	<classpathentry kind="lib" path="lib/mqtt-utility-0.4.0.jar"/>
+	<classpathentry kind="lib" path="lib/RXTXcomm.jar"/>
+	<classpathentry kind="lib" path="lib/scala-library-2.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.6.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/snappy-java-1.1.1.7.jar"/>
+	<classpathentry kind="lib" path="lib/zkclient-0.3.jar"/>
+	<classpathentry kind="lib" path="lib/zookeeper-3.4.6.jar"/>
+	<classpathentry kind="lib" path="lib/storm-kafka-0.10.0.jar"/>
+	<classpathentry kind="lib" path="lib/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/guava-19.0.jar"/>
+	<classpathentry kind="lib" path="lib/curator-client-2.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/curator-framework-2.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/storm"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
