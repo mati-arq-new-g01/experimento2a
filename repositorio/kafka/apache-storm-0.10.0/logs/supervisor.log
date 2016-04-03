@@ -4826,3 +4826,366 @@ java.lang.RuntimeException: ("Error when processing an event")
 	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:48) [storm-core-0.10.0.jar:0.10.0]
 	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
 	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+2016-04-03 16:01:19.024 b.s.u.Utils [INFO] Using defaults.yaml from resources
+2016-04-03 16:01:20.136 b.s.u.Utils [INFO] Using storm.yaml from resources
+2016-04-03 16:01:30.279 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-04-03 16:01:30.279 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:host.name=da161d850fb4
+2016-04-03 16:01:30.280 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.version=1.7.0_95
+2016-04-03 16:01:30.287 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.vendor=Oracle Corporation
+2016-04-03 16:01:30.288 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+2016-04-03 16:01:30.299 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.class.path=/home/kafka/apache-storm-0.10.0/lib/asm-4.0.jar:/home/kafka/apache-storm-0.10.0/lib/clojure-1.6.0.jar:/home/kafka/apache-storm-0.10.0/lib/disruptor-2.10.4.jar:/home/kafka/apache-storm-0.10.0/lib/hadoop-auth-2.4.0.jar:/home/kafka/apache-storm-0.10.0/lib/kryo-2.21.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-api-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-core-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-over-slf4j-1.6.6.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-slf4j-impl-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/minlog-1.2.jar:/home/kafka/apache-storm-0.10.0/lib/reflectasm-1.07-shaded.jar:/home/kafka/apache-storm-0.10.0/lib/servlet-api-2.5.jar:/home/kafka/apache-storm-0.10.0/lib/slf4j-api-1.7.7.jar:/home/kafka/apache-storm-0.10.0/lib/storm-core-0.10.0.jar:/home/kafka/apache-storm-0.10.0/conf
+2016-04-03 16:01:30.302 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib
+2016-04-03 16:01:30.304 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.io.tmpdir=/tmp
+2016-04-03 16:01:30.307 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.compiler=<NA>
+2016-04-03 16:01:30.310 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.name=Linux
+2016-04-03 16:01:30.314 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.arch=amd64
+2016-04-03 16:01:30.315 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.version=3.13.0-76-generic
+2016-04-03 16:01:30.316 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.name=root
+2016-04-03 16:01:30.317 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.home=/root
+2016-04-03 16:01:30.318 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.dir=/home/kafka/apache-storm-0.10.0
+2016-04-03 16:01:30.420 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-04-03 16:01:30.421 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:host.name=da161d850fb4
+2016-04-03 16:01:30.429 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.version=1.7.0_95
+2016-04-03 16:01:30.431 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.vendor=Oracle Corporation
+2016-04-03 16:01:30.434 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+2016-04-03 16:01:30.437 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.class.path=/home/kafka/apache-storm-0.10.0/lib/asm-4.0.jar:/home/kafka/apache-storm-0.10.0/lib/clojure-1.6.0.jar:/home/kafka/apache-storm-0.10.0/lib/disruptor-2.10.4.jar:/home/kafka/apache-storm-0.10.0/lib/hadoop-auth-2.4.0.jar:/home/kafka/apache-storm-0.10.0/lib/kryo-2.21.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-api-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-core-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-over-slf4j-1.6.6.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-slf4j-impl-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/minlog-1.2.jar:/home/kafka/apache-storm-0.10.0/lib/reflectasm-1.07-shaded.jar:/home/kafka/apache-storm-0.10.0/lib/servlet-api-2.5.jar:/home/kafka/apache-storm-0.10.0/lib/slf4j-api-1.7.7.jar:/home/kafka/apache-storm-0.10.0/lib/storm-core-0.10.0.jar:/home/kafka/apache-storm-0.10.0/conf
+2016-04-03 16:01:30.438 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib
+2016-04-03 16:01:30.438 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.io.tmpdir=/tmp
+2016-04-03 16:01:30.440 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.compiler=<NA>
+2016-04-03 16:01:30.441 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.name=Linux
+2016-04-03 16:01:30.441 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.arch=amd64
+2016-04-03 16:01:30.447 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.version=3.13.0-76-generic
+2016-04-03 16:01:30.453 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.name=root
+2016-04-03 16:01:30.456 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.home=/root
+2016-04-03 16:01:30.457 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.dir=/home/kafka/apache-storm-0.10.0
+2016-04-03 16:01:33.419 b.s.u.Utils [INFO] Using defaults.yaml from resources
+2016-04-03 16:01:33.564 b.s.u.Utils [INFO] Using storm.yaml from resources
+2016-04-03 16:01:34.126 b.s.d.supervisor [INFO] Starting Supervisor with conf {"topology.builtin.metrics.bucket.size.secs" 60, "nimbus.childopts" "-Xmx1024m -Djava.net.preferIPv4Stack=true", "ui.filter.params" nil, "storm.cluster.mode" "distributed", "storm.messaging.netty.client_worker_threads" 1, "supervisor.run.worker.as.user" false, "topology.max.task.parallelism" nil, "zmq.threads" 1, "storm.group.mapping.service" "backtype.storm.security.auth.ShellBasedGroupsMapping", "transactional.zookeeper.root" "/transactional", "topology.sleep.spout.wait.strategy.time.ms" 1, "drpc.invocations.port" 3773, "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "storm.messaging.netty.server_worker_threads" 1, "topology.max.error.report.per.interval" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "zmq.hwm" 0, "storm.principal.tolocal" "backtype.storm.security.auth.DefaultPrincipalToLocal", "supervisor.worker.shutdown.sleep.secs" 1, "storm.zookeeper.retry.times" 5, "ui.actions.enabled" true, "zmq.linger.millis" 5000, "supervisor.enable" true, "topology.stats.sample.rate" 0.05, "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2181, "supervisor.heartbeat.frequency.secs" 5, "topology.enable.message.timeouts" true, "drpc.worker.threads" 64, "drpc.queue.size" 128, "drpc.https.keystore.password" "", "logviewer.port" 8000, "nimbus.reassign" true, "topology.executor.send.buffer.size" 1024, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "ui.host" "0.0.0.0", "storm.nimbus.retry.interval.millis" 2000, "nimbus.inbox.jar.expiration.secs" 3600, "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.acker.executors" nil, "topology.fall.back.on.java.serialization" true, "storm.zookeeper.servers" ["localhost"], "nimbus.thrift.threads" 64, "logviewer.cleanup.age.mins" 10080, "topology.worker.childopts" nil, "topology.classpath" nil, "supervisor.monitor.frequency.secs" 3, "nimbus.credential.renewers.freq.secs" 600, "topology.skip.missing.kryo.registrations" false, "drpc.authorizer.acl.filename" "drpc-auth-acl.yaml", "storm.group.mapping.service.cache.duration.secs" 120, "topology.testing.always.try.serialize" false, "nimbus.monitor.freq.secs" 10, "supervisor.supervisors" [], "topology.tasks" nil, "topology.bolts.outgoing.overflow.buffer.enable" false, "storm.messaging.netty.socket.backlog" 500, "topology.workers" 1, "storm.local.dir" "/home/kafka/apache-storm-0.10.0", "worker.childopts" "-Xmx768m -Djava.net.preferIPv4Stack=true", "storm.auth.simple-white-list.users" [], "topology.message.timeout.secs" 30, "topology.state.synchronization.timeout.secs" 60, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "supervisor.supervisors.commands" [], "logviewer.childopts" "-Xmx128m", "topology.environment" nil, "topology.debug" false, "storm.messaging.netty.max_retries" 300, "ui.childopts" "-Xmx768m -Djava.net.preferIPv4Stack=true", "storm.zookeeper.session.timeout" 20000, "drpc.childopts" "-Xmx768m", "drpc.http.creds.plugin" "backtype.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.connection.timeout" 15000, "storm.zookeeper.auth.user" nil, "storm.meta.serialization.delegate" "backtype.storm.serialization.GzipThriftSerializationDelegate", "topology.max.spout.pending" nil, "nimbus.supervisor.timeout.secs" 60, "nimbus.task.timeout.secs" 30, "drpc.port" 3772, "storm.zookeeper.retry.intervalceiling.millis" 30000, "nimbus.thrift.port" 6627, "storm.auth.simple-acl.admins" [], "storm.nimbus.retry.times" 5, "supervisor.worker.start.timeout.secs" 120, "storm.zookeeper.retry.interval" 1000, "logs.users" nil, "transactional.zookeeper.port" nil, "drpc.max_buffer_size" 1048576, "task.credentials.poll.secs" 30, "drpc.https.keystore.type" "JKS", "topology.worker.receiver.thread.count" 1, "supervisor.slots.ports" [6700 6701 6702 6703], "topology.transfer.buffer.size" 1024, "topology.worker.shared.thread.pool.size" 4, "drpc.authorizer.acl.strict" false, "nimbus.file.copy.expiration.secs" 600, "topology.executor.receive.buffer.size" 1024, "nimbus.task.launch.secs" 120, "storm.local.mode.zmq" false, "storm.messaging.netty.buffer_size" 5242880, "worker.heartbeat.frequency.secs" 1, "ui.http.creds.plugin" "backtype.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.root" "/storm", "topology.tick.tuple.freq.secs" nil, "drpc.https.port" -1, "task.refresh.poll.secs" 10, "task.heartbeat.frequency.secs" 3, "storm.messaging.netty.max_wait_ms" 1000, "nimbus.impersonation.authorizer" "backtype.storm.security.auth.authorizer.ImpersonationAuthorizer", "drpc.http.port" 3774, "topology.error.throttle.interval.secs" 10, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "storm.messaging.netty.authentication" false, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "worker.gc.childopts" "", "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "nimbus.cleanup.inbox.freq.secs" 600, "ui.users" nil, "transactional.zookeeper.servers" nil, "supervisor.worker.timeout.secs" 30, "storm.zookeeper.auth.password" nil, "supervisor.childopts" "-Djava.net.preferIPv4Stack=true", "ui.filter" nil, "ui.header.buffer.bytes" 4096, "topology.disruptor.wait.timeout.millis" 1000, "storm.nimbus.retry.intervalceiling.millis" 60000, "topology.trident.batch.emit.interval.millis" 500, "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "storm.auth.simple-acl.users" [], "drpc.invocations.threads" 64, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "ui.port" 8080, "storm.messaging.netty.transfer.batch.size" 262144, "logviewer.appender.name" "A1", "nimbus.thrift.max_buffer_size" 1048576, "nimbus.host" "nimbus1", "storm.auth.simple-acl.users.commands" [], "drpc.request.timeout.secs" 600}
+2016-04-03 16:01:34.583 b.s.u.StormBoundedExponentialBackoffRetry [INFO] The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+2016-04-03 16:01:35.177 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl [INFO] Starting
+2016-04-03 16:01:35.187 o.a.s.s.o.a.z.ZooKeeper [INFO] Initiating client connection, connectString=localhost:2181 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@10d6864
+2016-04-03 16:01:35.289 o.a.s.s.o.a.z.ClientCnxn [INFO] Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-04-03 16:01:35.349 o.a.s.s.o.a.z.ClientCnxn [INFO] Socket connection established to localhost/127.0.0.1:2181, initiating session
+2016-04-03 16:01:35.393 o.a.s.s.o.a.z.ClientCnxnSocket [WARN] Connected to an old server; r-o mode will be unavailable
+2016-04-03 16:01:35.396 o.a.s.s.o.a.z.ClientCnxn [INFO] Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x153dcd920a40002, negotiated timeout = 20000
+2016-04-03 16:01:35.410 o.a.s.s.o.a.c.f.s.ConnectionStateManager [INFO] State change: CONNECTED
+2016-04-03 16:01:35.430 b.s.zookeeper [INFO] Zookeeper state update: :connected:none
+2016-04-03 16:01:36.647 o.a.s.s.o.a.z.ZooKeeper [INFO] Session: 0x153dcd920a40002 closed
+2016-04-03 16:01:36.648 o.a.s.s.o.a.z.ClientCnxn [INFO] EventThread shut down
+2016-04-03 16:01:36.656 b.s.u.StormBoundedExponentialBackoffRetry [INFO] The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+2016-04-03 16:01:36.659 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl [INFO] Starting
+2016-04-03 16:01:36.667 o.a.s.s.o.a.z.ZooKeeper [INFO] Initiating client connection, connectString=localhost:2181/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@32e8310d
+2016-04-03 16:01:36.703 o.a.s.s.o.a.z.ClientCnxn [INFO] Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-04-03 16:01:36.708 o.a.s.s.o.a.z.ClientCnxn [INFO] Socket connection established to localhost/127.0.0.1:2181, initiating session
+2016-04-03 16:01:36.724 o.a.s.s.o.a.z.ClientCnxnSocket [WARN] Connected to an old server; r-o mode will be unavailable
+2016-04-03 16:01:36.725 o.a.s.s.o.a.z.ClientCnxn [INFO] Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x153dcd920a40003, negotiated timeout = 20000
+2016-04-03 16:01:36.727 o.a.s.s.o.a.c.f.s.ConnectionStateManager [INFO] State change: CONNECTED
+2016-04-03 16:01:36.970 b.s.d.supervisor [INFO] Starting supervisor with id 0e2b5d20-4e74-4a67-9691-fa26b621cc03 at host da161d850fb4
+2016-04-03 16:01:37.680 b.s.event [ERROR] Error when processing event
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:118) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.get(LocalState.java:126) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.local_state$ls_local_assignments.invoke(local_state.clj:83) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.daemon.supervisor$sync_processes.invoke(supervisor.clj:321) ~[storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.applyToHelper(AFn.java:154) ~[clojure-1.6.0.jar:?]
+	at clojure.lang.AFn.applyTo(AFn.java:144) ~[clojure-1.6.0.jar:?]
+	at clojure.core$apply.invoke(core.clj:626) ~[clojure-1.6.0.jar:?]
+	at clojure.core$partial$fn__4228.doInvoke(core.clj:2468) ~[clojure-1.6.0.jar:?]
+	at clojure.lang.RestFn.invoke(RestFn.java:397) ~[clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:40) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+Caused by: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:106) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 11 more
+Caused by: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.generated.LocalStateData.validate(LocalStateData.java:336) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:403) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:364) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData.read(LocalStateData.java:310) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:81) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:67) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:100) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 11 more
+2016-04-03 16:01:37.783 b.s.event [ERROR] Error when processing event
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:118) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.get(LocalState.java:126) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.local_state$ls_local_assignments.invoke(local_state.clj:83) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.daemon.supervisor$mk_synchronize_supervisor$this__7638.invoke(supervisor.clj:443) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:40) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+Caused by: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:106) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 6 more
+Caused by: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.generated.LocalStateData.validate(LocalStateData.java:336) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:403) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:364) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData.read(LocalStateData.java:310) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:81) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:67) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:100) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 6 more
+2016-04-03 16:01:37.862 b.s.util [ERROR] Halting process: ("Error when processing an event")
+java.lang.RuntimeException: ("Error when processing an event")
+	at backtype.storm.util$exit_process_BANG_.doInvoke(util.clj:336) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:48) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+2016-04-03 16:01:37.889 b.s.d.supervisor [INFO] Shutting down supervisor 0e2b5d20-4e74-4a67-9691-fa26b621cc03
+2016-04-03 16:01:37.907 b.s.util [ERROR] Halting process: ("Error when processing an event")
+java.lang.RuntimeException: ("Error when processing an event")
+	at backtype.storm.util$exit_process_BANG_.doInvoke(util.clj:336) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:48) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+2016-04-03 18:57:39.993 b.s.u.Utils [INFO] Using defaults.yaml from resources
+2016-04-03 18:57:40.315 b.s.u.Utils [INFO] Using storm.yaml from resources
+2016-04-03 18:57:44.371 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-04-03 18:57:44.372 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:host.name=e732105a972e
+2016-04-03 18:57:44.373 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.version=1.7.0_95
+2016-04-03 18:57:44.373 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.vendor=Oracle Corporation
+2016-04-03 18:57:44.374 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+2016-04-03 18:57:44.375 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.class.path=/home/kafka/apache-storm-0.10.0/lib/asm-4.0.jar:/home/kafka/apache-storm-0.10.0/lib/clojure-1.6.0.jar:/home/kafka/apache-storm-0.10.0/lib/disruptor-2.10.4.jar:/home/kafka/apache-storm-0.10.0/lib/hadoop-auth-2.4.0.jar:/home/kafka/apache-storm-0.10.0/lib/kryo-2.21.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-api-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-core-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-over-slf4j-1.6.6.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-slf4j-impl-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/minlog-1.2.jar:/home/kafka/apache-storm-0.10.0/lib/reflectasm-1.07-shaded.jar:/home/kafka/apache-storm-0.10.0/lib/servlet-api-2.5.jar:/home/kafka/apache-storm-0.10.0/lib/slf4j-api-1.7.7.jar:/home/kafka/apache-storm-0.10.0/lib/storm-core-0.10.0.jar:/home/kafka/apache-storm-0.10.0/conf
+2016-04-03 18:57:44.376 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib
+2016-04-03 18:57:44.376 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.io.tmpdir=/tmp
+2016-04-03 18:57:44.377 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.compiler=<NA>
+2016-04-03 18:57:44.378 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.name=Linux
+2016-04-03 18:57:44.378 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.arch=amd64
+2016-04-03 18:57:44.379 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.version=3.13.0-83-generic
+2016-04-03 18:57:44.380 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.name=root
+2016-04-03 18:57:44.380 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.home=/root
+2016-04-03 18:57:44.381 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.dir=/home/kafka/apache-storm-0.10.0
+2016-04-03 18:57:44.409 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-04-03 18:57:44.410 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:host.name=e732105a972e
+2016-04-03 18:57:44.410 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.version=1.7.0_95
+2016-04-03 18:57:44.411 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.vendor=Oracle Corporation
+2016-04-03 18:57:44.411 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+2016-04-03 18:57:44.411 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.class.path=/home/kafka/apache-storm-0.10.0/lib/asm-4.0.jar:/home/kafka/apache-storm-0.10.0/lib/clojure-1.6.0.jar:/home/kafka/apache-storm-0.10.0/lib/disruptor-2.10.4.jar:/home/kafka/apache-storm-0.10.0/lib/hadoop-auth-2.4.0.jar:/home/kafka/apache-storm-0.10.0/lib/kryo-2.21.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-api-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-core-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-over-slf4j-1.6.6.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-slf4j-impl-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/minlog-1.2.jar:/home/kafka/apache-storm-0.10.0/lib/reflectasm-1.07-shaded.jar:/home/kafka/apache-storm-0.10.0/lib/servlet-api-2.5.jar:/home/kafka/apache-storm-0.10.0/lib/slf4j-api-1.7.7.jar:/home/kafka/apache-storm-0.10.0/lib/storm-core-0.10.0.jar:/home/kafka/apache-storm-0.10.0/conf
+2016-04-03 18:57:44.412 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib
+2016-04-03 18:57:44.412 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.io.tmpdir=/tmp
+2016-04-03 18:57:44.413 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.compiler=<NA>
+2016-04-03 18:57:44.413 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.name=Linux
+2016-04-03 18:57:44.414 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.arch=amd64
+2016-04-03 18:57:44.414 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.version=3.13.0-83-generic
+2016-04-03 18:57:44.414 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.name=root
+2016-04-03 18:57:44.415 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.home=/root
+2016-04-03 18:57:44.415 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.dir=/home/kafka/apache-storm-0.10.0
+2016-04-03 18:57:45.215 b.s.u.Utils [INFO] Using defaults.yaml from resources
+2016-04-03 18:57:45.265 b.s.u.Utils [INFO] Using storm.yaml from resources
+2016-04-03 18:57:45.578 b.s.d.supervisor [INFO] Starting Supervisor with conf {"topology.builtin.metrics.bucket.size.secs" 60, "nimbus.childopts" "-Xmx1024m -Djava.net.preferIPv4Stack=true", "ui.filter.params" nil, "storm.cluster.mode" "distributed", "storm.messaging.netty.client_worker_threads" 1, "supervisor.run.worker.as.user" false, "topology.max.task.parallelism" nil, "zmq.threads" 1, "storm.group.mapping.service" "backtype.storm.security.auth.ShellBasedGroupsMapping", "transactional.zookeeper.root" "/transactional", "topology.sleep.spout.wait.strategy.time.ms" 1, "drpc.invocations.port" 3773, "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "storm.messaging.netty.server_worker_threads" 1, "topology.max.error.report.per.interval" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "zmq.hwm" 0, "storm.principal.tolocal" "backtype.storm.security.auth.DefaultPrincipalToLocal", "supervisor.worker.shutdown.sleep.secs" 1, "storm.zookeeper.retry.times" 5, "ui.actions.enabled" true, "zmq.linger.millis" 5000, "supervisor.enable" true, "topology.stats.sample.rate" 0.05, "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2181, "supervisor.heartbeat.frequency.secs" 5, "topology.enable.message.timeouts" true, "drpc.worker.threads" 64, "drpc.queue.size" 128, "drpc.https.keystore.password" "", "logviewer.port" 8000, "nimbus.reassign" true, "topology.executor.send.buffer.size" 1024, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "ui.host" "0.0.0.0", "storm.nimbus.retry.interval.millis" 2000, "nimbus.inbox.jar.expiration.secs" 3600, "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.acker.executors" nil, "topology.fall.back.on.java.serialization" true, "storm.zookeeper.servers" ["localhost"], "nimbus.thrift.threads" 64, "logviewer.cleanup.age.mins" 10080, "topology.worker.childopts" nil, "topology.classpath" nil, "supervisor.monitor.frequency.secs" 3, "nimbus.credential.renewers.freq.secs" 600, "topology.skip.missing.kryo.registrations" false, "drpc.authorizer.acl.filename" "drpc-auth-acl.yaml", "storm.group.mapping.service.cache.duration.secs" 120, "topology.testing.always.try.serialize" false, "nimbus.monitor.freq.secs" 10, "supervisor.supervisors" [], "topology.tasks" nil, "topology.bolts.outgoing.overflow.buffer.enable" false, "storm.messaging.netty.socket.backlog" 500, "topology.workers" 1, "storm.local.dir" "/home/kafka/apache-storm-0.10.0", "worker.childopts" "-Xmx768m -Djava.net.preferIPv4Stack=true", "storm.auth.simple-white-list.users" [], "topology.message.timeout.secs" 30, "topology.state.synchronization.timeout.secs" 60, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "supervisor.supervisors.commands" [], "logviewer.childopts" "-Xmx128m", "topology.environment" nil, "topology.debug" false, "storm.messaging.netty.max_retries" 300, "ui.childopts" "-Xmx768m -Djava.net.preferIPv4Stack=true", "storm.zookeeper.session.timeout" 20000, "drpc.childopts" "-Xmx768m", "drpc.http.creds.plugin" "backtype.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.connection.timeout" 15000, "storm.zookeeper.auth.user" nil, "storm.meta.serialization.delegate" "backtype.storm.serialization.GzipThriftSerializationDelegate", "topology.max.spout.pending" nil, "nimbus.supervisor.timeout.secs" 60, "nimbus.task.timeout.secs" 30, "drpc.port" 3772, "storm.zookeeper.retry.intervalceiling.millis" 30000, "nimbus.thrift.port" 6627, "storm.auth.simple-acl.admins" [], "storm.nimbus.retry.times" 5, "supervisor.worker.start.timeout.secs" 120, "storm.zookeeper.retry.interval" 1000, "logs.users" nil, "transactional.zookeeper.port" nil, "drpc.max_buffer_size" 1048576, "task.credentials.poll.secs" 30, "drpc.https.keystore.type" "JKS", "topology.worker.receiver.thread.count" 1, "supervisor.slots.ports" [6700 6701 6702 6703], "topology.transfer.buffer.size" 1024, "topology.worker.shared.thread.pool.size" 4, "drpc.authorizer.acl.strict" false, "nimbus.file.copy.expiration.secs" 600, "topology.executor.receive.buffer.size" 1024, "nimbus.task.launch.secs" 120, "storm.local.mode.zmq" false, "storm.messaging.netty.buffer_size" 5242880, "worker.heartbeat.frequency.secs" 1, "ui.http.creds.plugin" "backtype.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.root" "/storm", "topology.tick.tuple.freq.secs" nil, "drpc.https.port" -1, "task.refresh.poll.secs" 10, "task.heartbeat.frequency.secs" 3, "storm.messaging.netty.max_wait_ms" 1000, "nimbus.impersonation.authorizer" "backtype.storm.security.auth.authorizer.ImpersonationAuthorizer", "drpc.http.port" 3774, "topology.error.throttle.interval.secs" 10, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "storm.messaging.netty.authentication" false, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "worker.gc.childopts" "", "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "nimbus.cleanup.inbox.freq.secs" 600, "ui.users" nil, "transactional.zookeeper.servers" nil, "supervisor.worker.timeout.secs" 30, "storm.zookeeper.auth.password" nil, "supervisor.childopts" "-Djava.net.preferIPv4Stack=true", "ui.filter" nil, "ui.header.buffer.bytes" 4096, "topology.disruptor.wait.timeout.millis" 1000, "storm.nimbus.retry.intervalceiling.millis" 60000, "topology.trident.batch.emit.interval.millis" 500, "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "storm.auth.simple-acl.users" [], "drpc.invocations.threads" 64, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "ui.port" 8080, "storm.messaging.netty.transfer.batch.size" 262144, "logviewer.appender.name" "A1", "nimbus.thrift.max_buffer_size" 1048576, "nimbus.host" "nimbus1", "storm.auth.simple-acl.users.commands" [], "drpc.request.timeout.secs" 600}
+2016-04-03 18:57:45.781 b.s.u.StormBoundedExponentialBackoffRetry [INFO] The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+2016-04-03 18:57:46.051 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl [INFO] Starting
+2016-04-03 18:57:46.064 o.a.s.s.o.a.z.ZooKeeper [INFO] Initiating client connection, connectString=localhost:2181 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@65496746
+2016-04-03 18:57:46.141 o.a.s.s.o.a.z.ClientCnxn [INFO] Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-04-03 18:57:46.168 o.a.s.s.o.a.z.ClientCnxn [INFO] Socket connection established to localhost/127.0.0.1:2181, initiating session
+2016-04-03 18:57:46.185 o.a.s.s.o.a.z.ClientCnxnSocket [WARN] Connected to an old server; r-o mode will be unavailable
+2016-04-03 18:57:46.186 o.a.s.s.o.a.z.ClientCnxn [INFO] Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x153dd79cb980004, negotiated timeout = 20000
+2016-04-03 18:57:46.194 o.a.s.s.o.a.c.f.s.ConnectionStateManager [INFO] State change: CONNECTED
+2016-04-03 18:57:46.214 b.s.zookeeper [INFO] Zookeeper state update: :connected:none
+2016-04-03 18:57:47.262 o.a.s.s.o.a.z.ZooKeeper [INFO] Session: 0x153dd79cb980004 closed
+2016-04-03 18:57:47.262 o.a.s.s.o.a.z.ClientCnxn [INFO] EventThread shut down
+2016-04-03 18:57:47.266 b.s.u.StormBoundedExponentialBackoffRetry [INFO] The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+2016-04-03 18:57:47.268 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl [INFO] Starting
+2016-04-03 18:57:47.269 o.a.s.s.o.a.z.ZooKeeper [INFO] Initiating client connection, connectString=localhost:2181/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@61e7d2fc
+2016-04-03 18:57:47.272 o.a.s.s.o.a.z.ClientCnxn [INFO] Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-04-03 18:57:47.274 o.a.s.s.o.a.z.ClientCnxn [INFO] Socket connection established to localhost/127.0.0.1:2181, initiating session
+2016-04-03 18:57:47.282 o.a.s.s.o.a.z.ClientCnxnSocket [WARN] Connected to an old server; r-o mode will be unavailable
+2016-04-03 18:57:47.285 o.a.s.s.o.a.z.ClientCnxn [INFO] Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x153dd79cb980005, negotiated timeout = 20000
+2016-04-03 18:57:47.289 o.a.s.s.o.a.c.f.s.ConnectionStateManager [INFO] State change: CONNECTED
+2016-04-03 18:57:47.424 b.s.d.supervisor [INFO] Starting supervisor with id 0e2b5d20-4e74-4a67-9691-fa26b621cc03 at host e732105a972e
+2016-04-03 18:57:47.900 b.s.event [ERROR] Error when processing event
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:118) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.get(LocalState.java:126) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.local_state$ls_local_assignments.invoke(local_state.clj:83) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.daemon.supervisor$sync_processes.invoke(supervisor.clj:321) ~[storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.applyToHelper(AFn.java:154) ~[clojure-1.6.0.jar:?]
+	at clojure.lang.AFn.applyTo(AFn.java:144) ~[clojure-1.6.0.jar:?]
+	at clojure.core$apply.invoke(core.clj:626) ~[clojure-1.6.0.jar:?]
+	at clojure.core$partial$fn__4228.doInvoke(core.clj:2468) ~[clojure-1.6.0.jar:?]
+	at clojure.lang.RestFn.invoke(RestFn.java:397) ~[clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:40) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+Caused by: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:106) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 11 more
+Caused by: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.generated.LocalStateData.validate(LocalStateData.java:336) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:403) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:364) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData.read(LocalStateData.java:310) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:81) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:67) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:100) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 11 more
+2016-04-03 18:57:47.984 b.s.util [ERROR] Halting process: ("Error when processing an event")
+java.lang.RuntimeException: ("Error when processing an event")
+	at backtype.storm.util$exit_process_BANG_.doInvoke(util.clj:336) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:48) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+2016-04-03 18:57:47.987 b.s.d.supervisor [INFO] Shutting down supervisor 0e2b5d20-4e74-4a67-9691-fa26b621cc03
+2016-04-03 18:57:48.228 b.s.event [ERROR] Error when processing event
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:118) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.get(LocalState.java:126) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.local_state$ls_local_assignments.invoke(local_state.clj:83) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.daemon.supervisor$mk_synchronize_supervisor$this__7638.invoke(supervisor.clj:443) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:40) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+Caused by: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:106) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 6 more
+Caused by: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.generated.LocalStateData.validate(LocalStateData.java:336) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:403) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:364) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData.read(LocalStateData.java:310) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:81) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:67) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:100) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 6 more
+2016-04-03 18:57:48.239 b.s.util [ERROR] Halting process: ("Error when processing an event")
+java.lang.RuntimeException: ("Error when processing an event")
+	at backtype.storm.util$exit_process_BANG_.doInvoke(util.clj:336) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:48) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+2016-04-03 19:09:34.987 b.s.u.Utils [INFO] Using defaults.yaml from resources
+2016-04-03 19:09:35.237 b.s.u.Utils [INFO] Using storm.yaml from resources
+2016-04-03 19:09:38.800 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-04-03 19:09:38.800 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:host.name=38335708ef71
+2016-04-03 19:09:38.801 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.version=1.7.0_95
+2016-04-03 19:09:38.802 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.vendor=Oracle Corporation
+2016-04-03 19:09:38.802 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+2016-04-03 19:09:38.803 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.class.path=/home/kafka/apache-storm-0.10.0/lib/asm-4.0.jar:/home/kafka/apache-storm-0.10.0/lib/clojure-1.6.0.jar:/home/kafka/apache-storm-0.10.0/lib/disruptor-2.10.4.jar:/home/kafka/apache-storm-0.10.0/lib/hadoop-auth-2.4.0.jar:/home/kafka/apache-storm-0.10.0/lib/kryo-2.21.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-api-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-core-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-over-slf4j-1.6.6.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-slf4j-impl-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/minlog-1.2.jar:/home/kafka/apache-storm-0.10.0/lib/reflectasm-1.07-shaded.jar:/home/kafka/apache-storm-0.10.0/lib/servlet-api-2.5.jar:/home/kafka/apache-storm-0.10.0/lib/slf4j-api-1.7.7.jar:/home/kafka/apache-storm-0.10.0/lib/storm-core-0.10.0.jar:/home/kafka/apache-storm-0.10.0/conf
+2016-04-03 19:09:38.804 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib
+2016-04-03 19:09:38.804 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.io.tmpdir=/tmp
+2016-04-03 19:09:38.805 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:java.compiler=<NA>
+2016-04-03 19:09:38.805 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.name=Linux
+2016-04-03 19:09:38.806 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.arch=amd64
+2016-04-03 19:09:38.806 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:os.version=3.13.0-83-generic
+2016-04-03 19:09:38.806 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.name=root
+2016-04-03 19:09:38.807 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.home=/root
+2016-04-03 19:09:38.807 o.a.s.s.o.a.z.ZooKeeper [INFO] Client environment:user.dir=/home/kafka/apache-storm-0.10.0
+2016-04-03 19:09:38.835 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2016-04-03 19:09:38.836 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:host.name=38335708ef71
+2016-04-03 19:09:38.836 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.version=1.7.0_95
+2016-04-03 19:09:38.837 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.vendor=Oracle Corporation
+2016-04-03 19:09:38.837 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+2016-04-03 19:09:38.838 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.class.path=/home/kafka/apache-storm-0.10.0/lib/asm-4.0.jar:/home/kafka/apache-storm-0.10.0/lib/clojure-1.6.0.jar:/home/kafka/apache-storm-0.10.0/lib/disruptor-2.10.4.jar:/home/kafka/apache-storm-0.10.0/lib/hadoop-auth-2.4.0.jar:/home/kafka/apache-storm-0.10.0/lib/kryo-2.21.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-api-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-core-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-over-slf4j-1.6.6.jar:/home/kafka/apache-storm-0.10.0/lib/log4j-slf4j-impl-2.1.jar:/home/kafka/apache-storm-0.10.0/lib/minlog-1.2.jar:/home/kafka/apache-storm-0.10.0/lib/reflectasm-1.07-shaded.jar:/home/kafka/apache-storm-0.10.0/lib/servlet-api-2.5.jar:/home/kafka/apache-storm-0.10.0/lib/slf4j-api-1.7.7.jar:/home/kafka/apache-storm-0.10.0/lib/storm-core-0.10.0.jar:/home/kafka/apache-storm-0.10.0/conf
+2016-04-03 19:09:38.838 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.library.path=/usr/local/lib:/opt/local/lib:/usr/lib
+2016-04-03 19:09:38.839 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.io.tmpdir=/tmp
+2016-04-03 19:09:38.839 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:java.compiler=<NA>
+2016-04-03 19:09:38.840 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.name=Linux
+2016-04-03 19:09:38.840 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.arch=amd64
+2016-04-03 19:09:38.840 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:os.version=3.13.0-83-generic
+2016-04-03 19:09:38.841 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.name=root
+2016-04-03 19:09:38.841 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.home=/root
+2016-04-03 19:09:38.842 o.a.s.s.o.a.z.s.ZooKeeperServer [INFO] Server environment:user.dir=/home/kafka/apache-storm-0.10.0
+2016-04-03 19:09:39.547 b.s.u.Utils [INFO] Using defaults.yaml from resources
+2016-04-03 19:09:39.588 b.s.u.Utils [INFO] Using storm.yaml from resources
+2016-04-03 19:09:39.755 b.s.d.supervisor [INFO] Starting Supervisor with conf {"topology.builtin.metrics.bucket.size.secs" 60, "nimbus.childopts" "-Xmx1024m -Djava.net.preferIPv4Stack=true", "ui.filter.params" nil, "storm.cluster.mode" "distributed", "storm.messaging.netty.client_worker_threads" 1, "supervisor.run.worker.as.user" false, "topology.max.task.parallelism" nil, "zmq.threads" 1, "storm.group.mapping.service" "backtype.storm.security.auth.ShellBasedGroupsMapping", "transactional.zookeeper.root" "/transactional", "topology.sleep.spout.wait.strategy.time.ms" 1, "drpc.invocations.port" 3773, "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "storm.messaging.netty.server_worker_threads" 1, "topology.max.error.report.per.interval" 5, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "zmq.hwm" 0, "storm.principal.tolocal" "backtype.storm.security.auth.DefaultPrincipalToLocal", "supervisor.worker.shutdown.sleep.secs" 1, "storm.zookeeper.retry.times" 5, "ui.actions.enabled" true, "zmq.linger.millis" 5000, "supervisor.enable" true, "topology.stats.sample.rate" 0.05, "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2181, "supervisor.heartbeat.frequency.secs" 5, "topology.enable.message.timeouts" true, "drpc.worker.threads" 64, "drpc.queue.size" 128, "drpc.https.keystore.password" "", "logviewer.port" 8000, "nimbus.reassign" true, "topology.executor.send.buffer.size" 1024, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "ui.host" "0.0.0.0", "storm.nimbus.retry.interval.millis" 2000, "nimbus.inbox.jar.expiration.secs" 3600, "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.acker.executors" nil, "topology.fall.back.on.java.serialization" true, "storm.zookeeper.servers" ["localhost"], "nimbus.thrift.threads" 64, "logviewer.cleanup.age.mins" 10080, "topology.worker.childopts" nil, "topology.classpath" nil, "supervisor.monitor.frequency.secs" 3, "nimbus.credential.renewers.freq.secs" 600, "topology.skip.missing.kryo.registrations" false, "drpc.authorizer.acl.filename" "drpc-auth-acl.yaml", "storm.group.mapping.service.cache.duration.secs" 120, "topology.testing.always.try.serialize" false, "nimbus.monitor.freq.secs" 10, "supervisor.supervisors" [], "topology.tasks" nil, "topology.bolts.outgoing.overflow.buffer.enable" false, "storm.messaging.netty.socket.backlog" 500, "topology.workers" 1, "storm.local.dir" "/home/kafka/apache-storm-0.10.0", "worker.childopts" "-Xmx768m -Djava.net.preferIPv4Stack=true", "storm.auth.simple-white-list.users" [], "topology.message.timeout.secs" 30, "topology.state.synchronization.timeout.secs" 60, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "supervisor.supervisors.commands" [], "logviewer.childopts" "-Xmx128m", "topology.environment" nil, "topology.debug" false, "storm.messaging.netty.max_retries" 300, "ui.childopts" "-Xmx768m -Djava.net.preferIPv4Stack=true", "storm.zookeeper.session.timeout" 20000, "drpc.childopts" "-Xmx768m", "drpc.http.creds.plugin" "backtype.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.connection.timeout" 15000, "storm.zookeeper.auth.user" nil, "storm.meta.serialization.delegate" "backtype.storm.serialization.GzipThriftSerializationDelegate", "topology.max.spout.pending" nil, "nimbus.supervisor.timeout.secs" 60, "nimbus.task.timeout.secs" 30, "drpc.port" 3772, "storm.zookeeper.retry.intervalceiling.millis" 30000, "nimbus.thrift.port" 6627, "storm.auth.simple-acl.admins" [], "storm.nimbus.retry.times" 5, "supervisor.worker.start.timeout.secs" 120, "storm.zookeeper.retry.interval" 1000, "logs.users" nil, "transactional.zookeeper.port" nil, "drpc.max_buffer_size" 1048576, "task.credentials.poll.secs" 30, "drpc.https.keystore.type" "JKS", "topology.worker.receiver.thread.count" 1, "supervisor.slots.ports" [6700 6701 6702 6703], "topology.transfer.buffer.size" 1024, "topology.worker.shared.thread.pool.size" 4, "drpc.authorizer.acl.strict" false, "nimbus.file.copy.expiration.secs" 600, "topology.executor.receive.buffer.size" 1024, "nimbus.task.launch.secs" 120, "storm.local.mode.zmq" false, "storm.messaging.netty.buffer_size" 5242880, "worker.heartbeat.frequency.secs" 1, "ui.http.creds.plugin" "backtype.storm.security.auth.DefaultHttpCredentialsPlugin", "storm.zookeeper.root" "/storm", "topology.tick.tuple.freq.secs" nil, "drpc.https.port" -1, "task.refresh.poll.secs" 10, "task.heartbeat.frequency.secs" 3, "storm.messaging.netty.max_wait_ms" 1000, "nimbus.impersonation.authorizer" "backtype.storm.security.auth.authorizer.ImpersonationAuthorizer", "drpc.http.port" 3774, "topology.error.throttle.interval.secs" 10, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "storm.messaging.netty.authentication" false, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "worker.gc.childopts" "", "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "nimbus.cleanup.inbox.freq.secs" 600, "ui.users" nil, "transactional.zookeeper.servers" nil, "supervisor.worker.timeout.secs" 30, "storm.zookeeper.auth.password" nil, "supervisor.childopts" "-Djava.net.preferIPv4Stack=true", "ui.filter" nil, "ui.header.buffer.bytes" 4096, "topology.disruptor.wait.timeout.millis" 1000, "storm.nimbus.retry.intervalceiling.millis" 60000, "topology.trident.batch.emit.interval.millis" 500, "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "storm.auth.simple-acl.users" [], "drpc.invocations.threads" 64, "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "ui.port" 8080, "storm.messaging.netty.transfer.batch.size" 262144, "logviewer.appender.name" "A1", "nimbus.thrift.max_buffer_size" 1048576, "nimbus.host" "nimbus1", "storm.auth.simple-acl.users.commands" [], "drpc.request.timeout.secs" 600}
+2016-04-03 19:09:39.883 b.s.u.StormBoundedExponentialBackoffRetry [INFO] The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+2016-04-03 19:09:40.075 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl [INFO] Starting
+2016-04-03 19:09:40.084 o.a.s.s.o.a.z.ZooKeeper [INFO] Initiating client connection, connectString=localhost:2181 sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@65496746
+2016-04-03 19:09:40.137 o.a.s.s.o.a.z.ClientCnxn [INFO] Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-04-03 19:09:40.154 o.a.s.s.o.a.z.ClientCnxn [INFO] Socket connection established to localhost/127.0.0.1:2181, initiating session
+2016-04-03 19:09:40.169 o.a.s.s.o.a.z.ClientCnxnSocket [WARN] Connected to an old server; r-o mode will be unavailable
+2016-04-03 19:09:40.170 o.a.s.s.o.a.z.ClientCnxn [INFO] Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x153dd8123720004, negotiated timeout = 20000
+2016-04-03 19:09:40.177 o.a.s.s.o.a.c.f.s.ConnectionStateManager [INFO] State change: CONNECTED
+2016-04-03 19:09:40.184 b.s.zookeeper [INFO] Zookeeper state update: :connected:none
+2016-04-03 19:09:41.223 o.a.s.s.o.a.z.ClientCnxn [INFO] EventThread shut down
+2016-04-03 19:09:41.224 o.a.s.s.o.a.z.ZooKeeper [INFO] Session: 0x153dd8123720004 closed
+2016-04-03 19:09:41.230 b.s.u.StormBoundedExponentialBackoffRetry [INFO] The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+2016-04-03 19:09:41.232 o.a.s.s.o.a.c.f.i.CuratorFrameworkImpl [INFO] Starting
+2016-04-03 19:09:41.233 o.a.s.s.o.a.z.ZooKeeper [INFO] Initiating client connection, connectString=localhost:2181/storm sessionTimeout=20000 watcher=org.apache.storm.shade.org.apache.curator.ConnectionState@3accd09b
+2016-04-03 19:09:41.258 o.a.s.s.o.a.z.ClientCnxn [INFO] Opening socket connection to server localhost/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+2016-04-03 19:09:41.259 o.a.s.s.o.a.z.ClientCnxn [INFO] Socket connection established to localhost/127.0.0.1:2181, initiating session
+2016-04-03 19:09:41.266 o.a.s.s.o.a.z.ClientCnxnSocket [WARN] Connected to an old server; r-o mode will be unavailable
+2016-04-03 19:09:41.267 o.a.s.s.o.a.z.ClientCnxn [INFO] Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x153dd8123720005, negotiated timeout = 20000
+2016-04-03 19:09:41.267 o.a.s.s.o.a.c.f.s.ConnectionStateManager [INFO] State change: CONNECTED
+2016-04-03 19:09:41.367 b.s.d.supervisor [INFO] Starting supervisor with id 0e2b5d20-4e74-4a67-9691-fa26b621cc03 at host 38335708ef71
+2016-04-03 19:09:41.979 b.s.event [ERROR] Error when processing event
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:118) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.get(LocalState.java:126) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.local_state$ls_local_assignments.invoke(local_state.clj:83) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.daemon.supervisor$sync_processes.invoke(supervisor.clj:321) ~[storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.applyToHelper(AFn.java:154) ~[clojure-1.6.0.jar:?]
+	at clojure.lang.AFn.applyTo(AFn.java:144) ~[clojure-1.6.0.jar:?]
+	at clojure.core$apply.invoke(core.clj:626) ~[clojure-1.6.0.jar:?]
+	at clojure.core$partial$fn__4228.doInvoke(core.clj:2468) ~[clojure-1.6.0.jar:?]
+	at clojure.lang.RestFn.invoke(RestFn.java:397) ~[clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:40) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+Caused by: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:106) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 11 more
+Caused by: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.generated.LocalStateData.validate(LocalStateData.java:336) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:403) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:364) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData.read(LocalStateData.java:310) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:81) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:67) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:100) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 11 more
+2016-04-03 19:09:42.049 b.s.util [ERROR] Halting process: ("Error when processing an event")
+java.lang.RuntimeException: ("Error when processing an event")
+	at backtype.storm.util$exit_process_BANG_.doInvoke(util.clj:336) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:48) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+2016-04-03 19:09:42.053 b.s.d.supervisor [INFO] Shutting down supervisor 0e2b5d20-4e74-4a67-9691-fa26b621cc03
+2016-04-03 19:09:42.203 b.s.event [ERROR] Error when processing event
+java.lang.RuntimeException: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:118) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.get(LocalState.java:126) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.local_state$ls_local_assignments.invoke(local_state.clj:83) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.daemon.supervisor$mk_synchronize_supervisor$this__7638.invoke(supervisor.clj:443) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:40) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]
+Caused by: java.lang.RuntimeException: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:106) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 6 more
+Caused by: org.apache.thrift7.protocol.TProtocolException: Required field 'serialized_parts' is unset! Struct:LocalStateData(serialized_parts:null)
+	at backtype.storm.generated.LocalStateData.validate(LocalStateData.java:336) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:403) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData$LocalStateDataStandardScheme.read(LocalStateData.java:364) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.generated.LocalStateData.read(LocalStateData.java:310) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:81) ~[storm-core-0.10.0.jar:0.10.0]
+	at org.apache.thrift7.TDeserializer.deserialize(TDeserializer.java:67) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialDeserializeLatestVersion(LocalState.java:100) ~[storm-core-0.10.0.jar:0.10.0]
+	at backtype.storm.utils.LocalState.partialSnapshot(LocalState.java:114) ~[storm-core-0.10.0.jar:0.10.0]
+	... 6 more
+2016-04-03 19:09:42.207 b.s.util [ERROR] Halting process: ("Error when processing an event")
+java.lang.RuntimeException: ("Error when processing an event")
+	at backtype.storm.util$exit_process_BANG_.doInvoke(util.clj:336) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.RestFn.invoke(RestFn.java:423) [clojure-1.6.0.jar:?]
+	at backtype.storm.event$event_manager$fn__7258.invoke(event.clj:48) [storm-core-0.10.0.jar:0.10.0]
+	at clojure.lang.AFn.run(AFn.java:22) [clojure-1.6.0.jar:?]
+	at java.lang.Thread.run(Thread.java:745) [?:1.7.0_95]

@@ -46,6 +46,9 @@ public class Keys {
 	public static final String MONGO_BOLT_COUNT = "mongodbbolt.count";
 	
 	
+	//bridge
+	public static final String BRIDGE_MOSQUITTO = "bridge.mosquitto";
+	public static final String BRIDGE_ZOOKEEPER = "bridge.zookeeper";
 	
 	
 }

@@ -36,6 +36,6 @@ public class MqttPublish {
     }
     
     public static void main(String[] args) {
-		new MqttPublish().send("iotcats","hi");
+		new MqttPublish().send("iotdogs","date:04-04-2016;c:22;f:46");
 	}
 }

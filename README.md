@@ -8,20 +8,33 @@
    vagrant up
 
 
-3. Subir instancia de Mosquitto
+3. Subir instancia de Mosquitto (172.17.0.2)
 
 	docker run --name mosquitto -p 1883:1883 -itd matiang01/mosquitto
-
+	
 	docker exec -it mosquitto bash
   	
 	mosquitto &
 
 	exit
 	
-   
-3. Subir instancia de kafka
+4. Subir instancia de mongo (172.17.0.3)
+
+	docker run --name realtimedb -h realtimedb -itd matiang01/mongo
+
+	docker exec -it realtimedb bash
+
+	mongod &
 	
-	docker run --name kafka -p 2181:2181 -p 9092:9092 -v /home/vagrant/kafka:/home/kafka -itd matiang01/java
+	mongo
+	
+	db.createCollection("temperature");
+	
+	exit
+   
+5. Subir instancia de kafka (172.17.0.4)
+	
+	docker run --name kafka -p 2181:2181 -p 8080:8080 -p 9092:9092 -v /home/vagrant/kafka:/home/kafka -itd matiang01/java
 		
 	docker exec -it kafka bash
  
@@ -35,11 +48,11 @@
 	
 	bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic iotdogs
 	
-	cd /home/kafka/kafka_2.9.2-0.8.2.2/libs
+	cd /home/kafka/standalone/
 	
-	java -jar  bridgekafka.jar tcp://172.17.0.2:1883 localhost:2181 &
+	java -jar iot-framework.jar --bridge start bridge_config.properties
 
-4. Subir instancia de storm (importante: Zookeeper debe estar corriendo)
+6. Subir instancia de storm (importante: Zookeeper debe estar corriendo)
 
 	cd /home/kafka/apache-storm-0.10.0/
 	
@@ -47,37 +60,36 @@
 	
 	bin/storm supervisor &
 	
-	cd /home/kafka/storm-topology
+	bin/storm ui &
 	
-	java -jar temperature-storm.jar
+	cd /home/kafka/standalone/
+	
+	java -jar iot-framework.jar --storm temperature default_config.properties &
 	
 	
 5. Dispositivos IoT
-
-java -jar  iotGateway.jar
 	
-Conectar dispositivo	
+   Conectar dispositivos (tcp://localhost:1883)
 
   	
 ##Validaciones:
 
-cd /home/kafka/kafka_2.9.2-0.8.2.2/
+1. Validar topico en Kafka (abrir un putty independiente)
 
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1  --partitions 1 --topic iotsmart
-
-bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic iotsmart --from-beginning
-
-bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic iotcats --from-beginning
-
-echo "date:01-04-2016;c:23;f:45" | bin/kafka-console-producer.sh --broker-list localhost:9092 --topic iotdogs
-
-cd /home/kafka/kafka_2.9.2-0.8.2.2/libs
-
-java -jar kafkapub.jar localhost:2181 test "hi"
-
-java -jar  bridgekafka.jar tcp://172.17.0.3:1883 localhost:2181
-
-bin/storm jar storm-wordcount.jar co.edu.uniandes.matiang01.storm.WordCountTopology WordCount -c nimbus.host=localhost
+	docker exec -it kafka bash
 	
-bin/storm jar /home/kafka/apache-storm-0.10.0/examples/storm-starter/storm-starter-topologies-0.10.0.jar storm.starter.RollingTopWords 
+	cd /home/kafka/kafka_2.9.2-0.8.2.2/
+	
+	bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic iotdogs --from-beginning
+
+2. Validar bd mongo (abrir un putty independiente)
+
+	docker exec -it realtimedb bash
+
+	mongo
+
+	db.temperature.find();
+
+
+
 	

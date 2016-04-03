@@ -45,8 +45,14 @@ public class MongodbBolt extends BaseRichBolt {
 	
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
 		this.collector = collector;
+		String url = "mongodb://"+user+":"+pass+"@"+host+":"+port+"/"+db;
+		if(user.isEmpty() || pass.isEmpty()){
+			url = "mongodb://"+host+":"+port+"/"+db;
+		}
+		
+		
 		this.mongoClient = new MongoClient(
-				new MongoClientURI( "mongodb://"+user+":"+pass+"@"+host+":"+port+"/"+db )
+				new MongoClientURI( url )
 		);
 		this.mongoDB = mongoClient.getDatabase(db);
 	}

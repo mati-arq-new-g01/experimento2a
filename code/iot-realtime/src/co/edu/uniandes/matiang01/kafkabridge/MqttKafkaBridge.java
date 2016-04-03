@@ -1,10 +1,11 @@
 package co.edu.uniandes.matiang01.kafkabridge;
 
 
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.sql.Timestamp;
 import java.util.Properties;
 
-import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
 
 import org.apache.log4j.Logger;
@@ -17,6 +18,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 
 import co.edu.uniandes.matiang01.constants.Constants;
 import co.edu.uniandes.matiang01.kafkapub.KafkaPub;
+import co.edu.uniandes.matiang01.storm.Keys;
 
 public class MqttKafkaBridge implements MqttCallback {
 	private Logger logger = Logger.getLogger(this.getClass().getName());
@@ -89,27 +91,21 @@ public class MqttKafkaBridge implements MqttCallback {
 
 	/**
 	 * @param args
+	 * @throws Exception 
 	 */
-	public static void main(String[] args) {
+	public static void run(String properties) throws Exception {
+		MqttKafkaBridge bridge = new MqttKafkaBridge();
+		Properties configs = new Properties();
 		try {
-			MqttKafkaBridge bridge = new MqttKafkaBridge();
-			
-			String mqttBroker = Constants.MQTT_BROKER;
-			String mqttKafkaZookeeper = Constants.KAFKA_ZOOKEEPER_CONNECT;
-			if(args != null && args.length > 0){
-				mqttBroker =args[0];
-				if(args.length > 1){
-					mqttKafkaZookeeper =args[1];
-				}
-			}
-			
-			bridge.connect(mqttBroker, Constants.MQTT_KAFKA_BRIDGE_CLIENT_ID, mqttKafkaZookeeper);
-			bridge.subscribe();
-			
-		} catch (MqttException e) {
-			e.printStackTrace(System.err);
-		} catch (Exception e) {
-			System.err.println(e.getMessage());
+			InputStream input = null;
+			input = new FileInputStream(properties);
+			configs.load(input);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+			System.exit(0);
 		}
+		bridge.connect(configs.getProperty(Keys.BRIDGE_MOSQUITTO), Constants.MQTT_KAFKA_BRIDGE_CLIENT_ID, configs.getProperty(Keys.BRIDGE_ZOOKEEPER));
+		bridge.subscribe();
+			
 	}
 }
