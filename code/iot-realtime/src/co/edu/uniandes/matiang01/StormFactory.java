@@ -2,6 +2,8 @@ package co.edu.uniandes.matiang01;
 
 import co.edu.uniandes.matiang01.storm.WordCountTopology;
 
+import com.uniandes.mascotas.MascotasTopology;
+
 public class StormFactory implements IoTFactory{
 
 	String job;
@@ -15,6 +17,8 @@ public class StormFactory implements IoTFactory{
 	public void run() throws Exception {
 		if(job.equals("temperature")){
 			WordCountTopology.run(properties);
+		}else if(job.equals("twitter")){
+			MascotasTopology.run();
 		}
 	}
 
