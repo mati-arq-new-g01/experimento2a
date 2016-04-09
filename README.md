@@ -50,7 +50,7 @@
 	
 	cd /home/kafka/standalone/
 	
-	java -jar iot-framework.jar --bridge start bridge_config.properties
+	java -jar iot-framework.jar --bridge start bridge_config.properties &
 
 6. Subir instancia de storm (importante: Zookeeper debe estar corriendo)
 
@@ -64,7 +64,7 @@
 	
 	cd /home/kafka/standalone/
 	
-	java -jar iot-framework.jar --storm temperature default_config.properties &
+	java -jar iot-framework.jar --storm temperature default_config.properties
 	
 	
 5. Dispositivos IoT
@@ -81,6 +81,8 @@
 	cd /home/kafka/kafka_2.9.2-0.8.2.2/
 	
 	bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic iotdogs --from-beginning
+	
+	echo "C:22;F:46" | bin/kafka-console-producer.sh --broker-list localhost:9092 --topic iotdogs
 
 2. Validar bd mongo (abrir un putty independiente)
 

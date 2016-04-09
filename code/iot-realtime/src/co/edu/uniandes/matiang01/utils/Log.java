@@ -10,4 +10,8 @@ public class Log {
 		logger.info(msg);
 	}
 
+	public static void error(String msg) {
+		logger.error(msg);
+	}
+
 }

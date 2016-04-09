@@ -2,19 +2,21 @@ package co.edu.uniandes.matiang01.storm.bolt;
 
 import java.util.Map;
 
-import org.bson.Document;
-
 import backtype.storm.task.OutputCollector;
 import backtype.storm.task.TopologyContext;
 import backtype.storm.topology.OutputFieldsDeclarer;
 import backtype.storm.topology.base.BaseRichBolt;
-import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
+import co.edu.uniandes.matiang01.utils.IoTUtils;
 import co.edu.uniandes.matiang01.utils.Log;
 
+import com.mongodb.DB;
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.util.JSON;
 
 
 public class MongodbBolt extends BaseRichBolt {
@@ -59,10 +61,14 @@ public class MongodbBolt extends BaseRichBolt {
 
 	
 	public void execute(Tuple input) {
-		
-		Document mongoDoc = getMongoDocForInput(input);
+		String content = (String) input.getString(0);
+		content = IoTUtils.getData("temperature", content);
+		Log.info("mensaje: "+content);	
+		DBObject mongoDoc = getMongoDocForInput(content);
 		try{
-			mongoDB.getCollection(collection).insertOne(mongoDoc);
+			DB database = mongoClient.getDB(db);
+			DBCollection dbCollection = database.getCollection(collection);
+			dbCollection.insert(mongoDoc);
 			collector.ack(input);
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -79,38 +85,26 @@ public class MongodbBolt extends BaseRichBolt {
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
 	}
 	
-	public Document  getMongoDocForInput(Tuple input) {
-		Document doc = new Document();
-		String content = (String) input.getString(0);
-		String[] parts = content.trim().split(";");
-		Log.info("Received in MongoDB bolt "+content);
-		try {
-			for(String part : parts) {
-				String[] subParts = part.split(":");
-				String fieldName = subParts[0];
-				String value = subParts[1];
-				Log.info("document "+" field:"+fieldName+" value:"+value);
-				doc.append(fieldName, value);
-			}
-		} catch(Exception e) {
-			
-		}
-		return doc;
+	public DBObject  getMongoDocForInput(String input) {
+		  DBObject dbObject = (DBObject)JSON.parse(input);
+		  return dbObject;
 	}
 	
 	public static void main(String[] args) {
 
 		MongodbBolt m = new MongodbBolt("ds059165.mlab.com", 59165, "gatos", "temperature","test","test");
 		m.prepare(null, null, null);
-		m.insert("hola");
+		m.insert("C:22;F:46");
 		System.out.println("");
 	}
 
 
 	private void insert(String string) {
-		Document doc = new Document();
-		doc.append("hola", "quetal");
-		mongoDB.getCollection(collection).insertOne(doc);
+		string = IoTUtils.getData("temperature", string);
+		DBObject mongoDoc = getMongoDocForInput(string);
+		DB database = mongoClient.getDB(db);
+		DBCollection dbCollection = database.getCollection(collection);
+		dbCollection.insert(mongoDoc);
 	}
 
 }

@@ -19,6 +19,7 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import co.edu.uniandes.matiang01.constants.Constants;
 import co.edu.uniandes.matiang01.kafkapub.KafkaPub;
 import co.edu.uniandes.matiang01.storm.Keys;
+import co.edu.uniandes.matiang01.utils.IoTUtils;
 
 public class MqttKafkaBridge implements MqttCallback {
 	private Logger logger = Logger.getLogger(this.getClass().getName());
@@ -44,6 +45,8 @@ public class MqttKafkaBridge implements MqttCallback {
 		            "\n\tTopic:   " + topic +
 		            "\n\tMessage: " + new String(message.getPayload()) +
 		            "\n\tQoS:     " + message.getQos() + "\n");
+		        
+		        
 		        pub.sendMessage(topic, new String(message.getPayload()));
 		    }
 		 
