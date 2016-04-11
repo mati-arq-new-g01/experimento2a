@@ -18,7 +18,7 @@ public class StormFactory implements IoTFactory{
 		if(job.equals("temperature")){
 			WordCountTopology.run(properties);
 		}else if(job.equals("twitter")){
-			MascotasTopology.run();
+			MascotasTopology.run(properties);
 		}
 	}
 

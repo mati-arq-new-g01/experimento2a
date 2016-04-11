@@ -42,7 +42,7 @@ public class Topology {
 		TopologyBuilder builder = new TopologyBuilder();	
 		KafkaSpout kafkaSpout = spoutBuilder.buildKafkaSpout();
 		SinkTypeBolt sinkTypeBolt = boltBuilder.buildSinkTypeBolt();
-		MongodbBolt mongoBolt = boltBuilder.buildMongodbBolt();
+		MongodbBolt mongoBolt = boltBuilder.buildTemperatureBolt();
 		
 		
 		//set the kafkaSpout to topology

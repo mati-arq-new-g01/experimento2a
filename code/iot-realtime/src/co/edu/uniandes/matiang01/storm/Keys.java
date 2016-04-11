@@ -37,12 +37,15 @@ public class Keys {
 	
 	//mongodb bolt
 	public static final String MONGO_BOLT_ID = "mongodb.bolt.id";
-	public static final String MONGO_HOST = "mongodb.host";
-	public static final String MONGO_PORT = "mongodb.port";
-	public static final String MONGO_DATABASE = "mongodb.database";
-	public static final String MONGO_COLLECTION = "mongodb.collection";
-	public static final String MONGO_USER = "mongodb.user";
-	public static final String MONGO_PASS = "mongodb.pass";
+	public static final String MONGO_TEMPERATURE_URL = "mongodb.temperature.url";
+	public static final String MONGO_TEMPERATURE_DATABASE = "mongodb.temperature.database";
+	public static final String MONGO_TEMPERATURE_COLLECTION = "mongodb.temperature.collection";
+	
+	public static final String MONGO_PET_URL = "mongodb.pet.url";
+	public static final String MONGO_PET_DATABASE = "mongodb.pet.database";
+	public static final String MONGO_PET_COLLECTION = "mongodb.pet.collection";
+	
+	
 	public static final String MONGO_BOLT_COUNT = "mongodbbolt.count";
 	
 	

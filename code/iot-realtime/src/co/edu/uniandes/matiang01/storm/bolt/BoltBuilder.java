@@ -4,6 +4,8 @@ import java.util.Properties;
 
 import co.edu.uniandes.matiang01.storm.Keys;
 
+import com.uniandes.mascotas.bolt.BoltPersistencia;
+
 /**
  * @author vishnu viswanath
  * This class is used for building bolts
@@ -20,14 +22,18 @@ public class BoltBuilder {
 		return new SinkTypeBolt();
 	}
 	
-	public MongodbBolt buildMongodbBolt() {
-		String host = configs.getProperty(Keys.MONGO_HOST);
-		int port = Integer.parseInt(configs.getProperty(Keys.MONGO_PORT));
-		String db = configs.getProperty(Keys.MONGO_DATABASE);
-		String collection = configs.getProperty(Keys.MONGO_COLLECTION);
-		String user = configs.getProperty(Keys.MONGO_USER);
-		String pass = configs.getProperty(Keys.MONGO_PASS);
-		return new MongodbBolt(host, port, db, collection,user,pass);
+	public PersistenceTemperatureBolt buildTemperatureBolt() {
+		String url = configs.getProperty(Keys.MONGO_TEMPERATURE_URL);
+		String db = configs.getProperty(Keys.MONGO_TEMPERATURE_DATABASE);
+		String collection = configs.getProperty(Keys.MONGO_TEMPERATURE_COLLECTION);
+		return new PersistenceTemperatureBolt(url, db, collection);
+	}
+	
+	public BoltPersistencia buildPetBolt() {
+		String url = configs.getProperty(Keys.MONGO_PET_URL);
+		String db = configs.getProperty(Keys.MONGO_PET_DATABASE);
+		String collection = configs.getProperty(Keys.MONGO_PET_COLLECTION);
+		return new BoltPersistencia(url, db, collection);
 	}
 	
 	

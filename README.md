@@ -66,6 +66,8 @@
 	
 	java -jar iot-framework.jar --storm temperature default_config.properties
 	
+	java -jar iot-framework.jar --storm twitter default_config.properties
+	
 	
 5. Dispositivos IoT
 	

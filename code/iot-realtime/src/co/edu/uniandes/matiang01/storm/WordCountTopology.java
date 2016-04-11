@@ -62,7 +62,7 @@ public class WordCountTopology {
     //ensures that the same word is sent to the same instance (group by field 'word')
     builder.setBolt("count", new WordCount(), 2).shuffleGrouping("kafkaSpout");
 
-    MongodbBolt mongoBolt = boltBuilder.buildMongodbBolt();
+    MongodbBolt mongoBolt = boltBuilder.buildTemperatureBolt();
     builder.setBolt("countgroup",mongoBolt,12).shuffleGrouping("count");
     
     //new configuration

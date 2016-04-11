@@ -23,38 +23,26 @@ public class MongodbBolt extends BaseRichBolt {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-	private OutputCollector collector;
-	private MongoDatabase mongoDB;
-	private MongoClient mongoClient;
+	protected static final long serialVersionUID = 1L;
+	protected OutputCollector collector;
+	protected MongoDatabase mongoDB;
+	protected MongoClient mongoClient;
 
-	private String collection;
-	public String host;
-	public int port ;
-	public String db;
-	public String user;
-	public String pass;
+	protected String urlConnection;
+	protected String collection;
+	protected String db;
 
-	public MongodbBolt(String host, int port, String db,String collection,String user, String pass) {
-		this.host = host;
-		this.port = port;
+	public MongodbBolt(String urlConnection,String db,String collection) {
+		this.urlConnection = urlConnection;
 		this.db = db;
 		this.collection = collection;
-		this.user = user;
-		this.pass = pass;
 	}
 	
 	
 	public void prepare(Map stormConf, TopologyContext context, OutputCollector collector) {
 		this.collector = collector;
-		String url = "mongodb://"+user+":"+pass+"@"+host+":"+port+"/"+db;
-		if(user.isEmpty() || pass.isEmpty()){
-			url = "mongodb://"+host+":"+port+"/"+db;
-		}
-		
-		
 		this.mongoClient = new MongoClient(
-				new MongoClientURI( url )
+				new MongoClientURI( urlConnection )
 		);
 		this.mongoDB = mongoClient.getDatabase(db);
 	}
@@ -92,7 +80,7 @@ public class MongodbBolt extends BaseRichBolt {
 	
 	public static void main(String[] args) {
 
-		MongodbBolt m = new MongodbBolt("ds059165.mlab.com", 59165, "gatos", "temperature","test","test");
+		MongodbBolt m = new MongodbBolt("mongodb://test:test@ds015478.mlab.com:15478/pets", "pets", "temperature");
 		m.prepare(null, null, null);
 		m.insert("C:22;F:46");
 		System.out.println("");

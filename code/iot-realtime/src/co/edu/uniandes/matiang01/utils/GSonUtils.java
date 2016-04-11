@@ -16,9 +16,9 @@ public class GSonUtils {
 	    return gson.fromJson(data, Temperature.class);
 	}
 	
-	public static String serialize(Temperature t){
+	public static String serialize(Object instance){
 		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").create();
-		return gson.toJson(t);
+		return gson.toJson(instance);
 	}
 	
 	public static void main(String[] args) {
