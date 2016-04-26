@@ -1,12 +1,9 @@
 package co.edu.uniandes.matiang01.iot.model;
 
-import java.util.Date;
-
-import com.google.gson.annotations.SerializedName;
 
 public class Temperature {
 
-	private String value;
+	private double value;
 	private String valueType;
 	private String sensorType;
 	private MongoDate createdAt;
@@ -14,19 +11,17 @@ public class Temperature {
 	public Temperature() {
 	}
 
-	
-	
 	public Temperature(String value, String valueType, String sensorType,MongoDate createdAt) {
-		this.value = value;
+		this.value = Double.valueOf(value);
 		this.valueType = valueType;
 		this.sensorType = sensorType;
 		this.createdAt = createdAt;
 	}
 
-	public String getValue() {
+	public Double getValue() {
 		return value;
 	}
-	public void setValue(String value) {
+	public void setValue(Double value) {
 		this.value = value;
 	}
 	public String getValueType() {
